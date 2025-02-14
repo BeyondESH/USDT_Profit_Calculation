@@ -11,9 +11,311 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>辅助交易工具-Beyond</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/icon/trade.svg</normaloff>:/icon/trade.svg</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,3,2">
+   <item>
+    <layout class="QVBoxLayout" name="inputVL">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>用户参数</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1,0,1,0,1,0,1,0">
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="kindsVL">
+            <item>
+             <layout class="QHBoxLayout" name="currenciesHL" stretch="1,4">
+              <item>
+               <widget class="QLabel" name="currenciesLabel">
+                <property name="text">
+                 <string>持仓币种:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="currenciescComboBox">
+                <property name="accessibleName">
+                 <string/>
+                </property>
+                <property name="placeholderText">
+                 <string>请选择币种</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>BTC</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>ETH</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>TRUMP</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>OKB</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>更多</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="unitKindsHL" stretch="1,4">
+              <item>
+               <widget class="QLabel" name="unitLabel">
+                <property name="text">
+                 <string>计价单位:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="unitComboBox">
+                <property name="accessibleName">
+                 <string/>
+                </property>
+                <property name="placeholderText">
+                 <string>请选择币种</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>USDT</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>USD</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>CNY</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>更多</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <layout class="QHBoxLayout" name="numberHL" stretch="1,4">
+              <item>
+               <widget class="QLabel" name="numberLabel">
+                <property name="text">
+                 <string>持仓数量:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="numberLineEdit"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="serviceCostRateHL" stretch="1,4">
+              <item>
+               <widget class="QLabel" name="serviceCostRateLabel">
+                <property name="text">
+                 <string>手续费率:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="serviceCostRateLineEdit"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <layout class="QHBoxLayout" name="costHL" stretch="1,4">
+              <item>
+               <widget class="QLabel" name="costLabel">
+                <property name="text">
+                 <string>成本价：</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="costLineEdit"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="marketHL" stretch="1,4">
+              <item>
+               <widget class="QLabel" name="marketLabel">
+                <property name="text">
+                 <string>市场价：</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="marketLineEdit"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="spacing">
+             <number>4</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="pushButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                <horstretch>100</horstretch>
+                <verstretch>50</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>200</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="sizeIncrement">
+               <size>
+                <width>3</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>确定</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="outputVL">
+     <item>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="title">
+        <string>分析结论</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="moreInfoVL">
+     <item>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="title">
+        <string>更多信息</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
  <connections/>
 </ui>
