@@ -27,7 +27,7 @@
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="0">
-         <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1,0,1,0,1,0,1,0">
+         <layout class="QHBoxLayout" name="inputHL" stretch="0,1,0,1,0,1,0,1,0">
           <item>
            <spacer name="horizontalSpacer_3">
             <property name="orientation">
@@ -146,7 +146,7 @@
            </spacer>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_2">
+           <layout class="QVBoxLayout" name="numberVL">
             <item>
              <layout class="QHBoxLayout" name="numberHL" stretch="1,4">
               <item>
@@ -162,7 +162,7 @@
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="serviceCostRateHL" stretch="1,4">
+             <layout class="QHBoxLayout" name="serviceCostRateHL" stretch="1,0">
               <item>
                <widget class="QLabel" name="serviceCostRateLabel">
                 <property name="text">
@@ -191,7 +191,7 @@
            </spacer>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_3">
+           <layout class="QVBoxLayout" name="priceVL">
             <item>
              <layout class="QHBoxLayout" name="costHL" stretch="1,4">
               <item>
@@ -236,7 +236,7 @@
            </spacer>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <layout class="QHBoxLayout" name="saveHL">
             <property name="spacing">
              <number>4</number>
             </property>
@@ -244,7 +244,7 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QPushButton" name="pushButton">
+             <widget class="QPushButton" name="savePushButton">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
                 <horstretch>100</horstretch>
@@ -264,7 +264,7 @@
                </size>
               </property>
               <property name="text">
-               <string>确定</string>
+               <string>保存</string>
               </property>
              </widget>
             </item>
@@ -293,10 +293,108 @@
    <item>
     <layout class="QVBoxLayout" name="outputVL">
      <item>
-      <widget class="QGroupBox" name="groupBox_2">
+      <widget class="QGroupBox" name="outputGroupBox">
        <property name="title">
         <string>分析结论</string>
        </property>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <layout class="QVBoxLayout" name="profitVL">
+          <item>
+           <layout class="QHBoxLayout" name="profitHL">
+            <item>
+             <layout class="QVBoxLayout" name="profitvVL_2">
+              <item>
+               <widget class="QLabel" name="profitlabel">
+                <property name="layoutDirection">
+                 <enum>Qt::LayoutDirection::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string>最小盈利价格:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="profitPushButton">
+                <property name="text">
+                 <string>计算</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>35</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="profitRateVL">
+          <item>
+           <layout class="QHBoxLayout" name="profitRateHL">
+            <item>
+             <layout class="QVBoxLayout" name="profitRateVL_2">
+              <item>
+               <widget class="QLabel" name="profitRateLabel">
+                <property name="layoutDirection">
+                 <enum>Qt::LayoutDirection::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string>盈利率:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="profitRatePushButton">
+                <property name="text">
+                 <string>计算</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="profitRateLineEdit">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>35</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6"/>
+        </item>
+       </layout>
       </widget>
      </item>
     </layout>
