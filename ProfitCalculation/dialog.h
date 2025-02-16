@@ -1,7 +1,9 @@
 #ifndef DIALOG_H
 #define DIALOG_H
 
+#include <QComboBox>
 #include <QDialog>
+#include "floatingdialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,7 +19,14 @@ public:
     Dialog(QWidget *parent = nullptr);
     ~Dialog();
 
+private slots:
+    void on_currenciescComboBox_currentTextChanged(const QString &arg1);
+
+    void on_unitComboBox_currentTextChanged(const QString &arg1);
+
 private:
     Ui::Dialog *ui;
+    bool isQcomboBoxRepeat(QComboBox &comboBox,QString & item);
+    FloatingDialog* _floatingDialog;
 };
 #endif // DIALOG_H

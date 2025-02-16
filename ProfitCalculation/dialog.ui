@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>辅助交易工具-Beyond</string>
+   <string>现货交易分析工具-Beyond</string>
   </property>
   <property name="windowIcon">
    <iconset resource="res.qrc">
@@ -104,7 +104,7 @@
                  <string/>
                 </property>
                 <property name="placeholderText">
-                 <string>请选择币种</string>
+                 <string>请选择单位</string>
                 </property>
                 <item>
                  <property name="text">
@@ -651,6 +651,28 @@
        <property name="title">
         <string>更多信息</string>
        </property>
+       <widget class="QWidget" name="layoutWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>131</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="serviceCostHL" stretch="1,0">
+         <item>
+          <widget class="QLabel" name="serviceCostLabel">
+           <property name="text">
+            <string>手续费:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="serviceCostLineEdit"/>
+         </item>
+        </layout>
+       </widget>
       </widget>
      </item>
     </layout>
