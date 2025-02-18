@@ -20,13 +20,13 @@ public:
     ~Dialog();
 
 private slots:
-    void on_currenciescComboBox_currentTextChanged(const QString &arg1);
+    void on_currenciescComboBox_textActivated(const QString &arg1);
 
-    void on_unitComboBox_currentTextChanged(const QString &arg1);
+    void on_unitComboBox_textActivated(const QString &arg1);
 
 private:
     Ui::Dialog *ui;
-    bool isQcomboBoxRepeat(QComboBox &comboBox,QString & item);
+    bool isQcomboBoxRepeat(QComboBox* comboBox,const QString & item);
     FloatingDialog* _floatingDialog;
 };
 #endif // DIALOG_H

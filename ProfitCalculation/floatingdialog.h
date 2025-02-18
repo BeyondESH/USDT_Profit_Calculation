@@ -14,7 +14,7 @@ class FloatingDialog : public QDialog
 public:
     explicit FloatingDialog(QWidget *parent = nullptr);
     ~FloatingDialog();
-    void setLabel(const QString &QString);
+    void setLabel(bool isSucceed,const QString &QString);
 private slots:
     void on_pushButton_clicked();
 
