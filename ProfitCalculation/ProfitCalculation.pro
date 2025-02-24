@@ -12,17 +12,20 @@ SOURCES += \
     floatingdialog.cpp \
     main.cpp \
     dialog.cpp \
+    tipsdialog.cpp \
     userinfo.cpp
 
 HEADERS += \
     dialog.h \
     floatingdialog.h \
     singleton.hpp \
+    tipsdialog.h \
     userinfo.h
 
 FORMS += \
     dialog.ui \
-    floatingdialog.ui
+    floatingdialog.ui \
+    tipsdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -8,6 +8,17 @@ FloatingDialog::FloatingDialog(QWidget *parent)
     ui->setupUi(this);
 }
 
+FloatingDialog::FloatingDialog(int Type, QWidget *parent)
+    : QDialog(parent)
+    , ui(new Ui::FloatingDialog)
+{
+    ui->setupUi(this);
+    _dialogType=Type;
+    if(_dialogType==DialogType::TipsField){
+        //
+    }
+}
+
 FloatingDialog::~FloatingDialog()
 {
     delete ui;

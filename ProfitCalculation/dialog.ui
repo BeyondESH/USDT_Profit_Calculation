@@ -148,7 +148,7 @@
           <item>
            <layout class="QVBoxLayout" name="numberVL">
             <item>
-             <layout class="QHBoxLayout" name="numberHL" stretch="1,4">
+             <layout class="QHBoxLayout" name="numberHL" stretch="1,0">
               <item>
                <widget class="QLabel" name="numberLabel">
                 <property name="text">
@@ -157,12 +157,12 @@
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="numberLineEdit"/>
+               <widget class="QLineEdit" name="numberLabelLineEdit"/>
               </item>
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="serviceCostRateHL" stretch="1,0">
+             <layout class="QHBoxLayout" name="serviceCostRateHL" stretch="1,4">
               <item>
                <widget class="QLabel" name="serviceCostRateLabel">
                 <property name="text">
@@ -171,7 +171,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="serviceCostRateLineEdit"/>
+               <widget class="QDoubleSpinBox" name="serviceCostRateLabeldoubleSpinBox"/>
               </item>
              </layout>
             </item>

@@ -1,6 +1,7 @@
 #include "dialog.h"
 #include "ui_dialog.h"
 #include "userinfo.h"
+#include "tipsdialog.h"
 
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
@@ -15,6 +16,17 @@ Dialog::Dialog(QWidget *parent)
     ui->serviceCostLineEdit->setEnabled(false);
     ui->currenciescComboBox->setCurrentIndex(-1);
     ui->unitComboBox->setCurrentIndex(-1);
+
+    QIntValidator *validotor  = new QIntValidator(0,10000000,this);
+    ui->numberLabelLineEdit->setValidator(validotor);
+    QDoubleValidator *doubleValidotor  = new QDoubleValidator(0,10000000,5,this);
+    ui->costLineEdit->setValidator(doubleValidotor);
+    ui->marketLineEdit->setValidator(doubleValidotor);
+
+    ui->serviceCostRateLabeldoubleSpinBox->setSuffix(" %");
+    ui->serviceCostRateLabeldoubleSpinBox->setRange(0, 100000.00000);
+    ui->serviceCostRateLabeldoubleSpinBox->setSingleStep(0.05);
+    ui->serviceCostRateLabeldoubleSpinBox->setDecimals(5);
 }
 
 Dialog::~Dialog()
@@ -45,9 +57,9 @@ void Dialog::on_currenciescComboBox_textActivated(const QString &arg1)
                 if((isQcomboBoxRepeat(ui->currenciescComboBox,item))==false){
                     _floatingDialog->setLabel(true,tr("添加成功!"));
                     _floatingDialog->close();
-                    int number=ui->unitComboBox->count();
-                    ui->unitComboBox->insertItem(number-1,item);
-                    ui->unitComboBox->setCurrentIndex(number-1);
+                    int number=ui->currenciescComboBox->count();
+                    ui->currenciescComboBox->insertItem(number-1,item);
+                    ui->currenciescComboBox->setCurrentIndex(number-1);
                     userInfo::getInstance().setCurrencyKinds(item);
                 }
             });
@@ -87,5 +99,14 @@ void Dialog::on_unitComboBox_textActivated(const QString &arg1)
             //qDebug()<<userInfo::getInstance().unit();
         }
     }
+}
+
+
+void Dialog::on_savePushButton_clicked()
+{
+    TipsDialog *tipsDialog = new TipsDialog(this);
+    tipsDialog->setLabel(false,tr("用户参数不完整"));
+    tipsDialog->setWindowModality(Qt::WindowModal);
+    tipsDialog->exec();
 }
 

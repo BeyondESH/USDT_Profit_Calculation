@@ -24,6 +24,8 @@ private slots:
 
     void on_unitComboBox_textActivated(const QString &arg1);
 
+    void on_savePushButton_clicked();
+
 private:
     Ui::Dialog *ui;
     bool isQcomboBoxRepeat(QComboBox* comboBox,const QString & item);
